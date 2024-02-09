@@ -1,9 +1,9 @@
 const { ipcRenderer } = require('electron')
 const ipc = ipcRenderer
 
-const closeBtn = document.querySelector<HTMLElement>('.content__header--tab__icon.close')
-const minBtn = document.querySelector<HTMLElement>('.content__header--tab__icon.minimize')
-const maxresBtn = document.querySelector<HTMLElement>('.content__header--tab__icon.reduce')
+const closeBtn = document.querySelector<HTMLElement>('.content__header--tab__icon#close')
+const minBtn = document.querySelector<HTMLElement>('.content__header--tab__icon#minimize')
+const maxresBtn = document.querySelector<HTMLElement>('.content__header--tab__icon#reduce')
 
 //Close App
 if (closeBtn) {
@@ -35,9 +35,9 @@ if (maxresBtn) {
     })
 }
 
-const editor_closeBtn = document.querySelector<HTMLElement>('.header--tab__icon.close')
-const editor_minBtn = document.querySelector<HTMLElement>('.header--tab__icon.minimize')
-const editor_maxresBtn = document.querySelector<HTMLElement>('.header--tab__icon.reduce')
+/*const editor_closeBtn = document.querySelector<HTMLElement>('.header--tab__icon#close')
+const editor_minBtn = document.querySelector<HTMLElement>('.header--tab__icon#minimize')
+const editor_maxresBtn = document.querySelector<HTMLElement>('.header--tab__icon#reduce')
 
 //Close App
 if (editor_closeBtn) {
@@ -67,4 +67,4 @@ if (editor_maxresBtn) {
             editor_maxBtn.style.display = "block"
         }
     })
-}
+}*/

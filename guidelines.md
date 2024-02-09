@@ -3,6 +3,8 @@
 index.html is the entry point of the application. It is the home page
 
 ## Required packages
+    You need to install nodejs
+    
     We are going to use electron for a stand alone application. So we will need to install some packages
     First download node.js and install on your computer and then restart the computer
     Then, you can come back and type node -v in the powershell to see if the installation is correct. The good result of that command in the powershell is "v20.11.0" or any other version you installed
