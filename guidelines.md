@@ -38,6 +38,8 @@ index.html is the entry point of the application. It is the home page
         concurrently
         electron // main framework for managing the stand alone window on your computer. It works just as a client navigator. Be patient it may take a few seconds at the end of the process
     
+    You may need to install nodemon globally on your computer in other for all to work just fine
+    Type thsi command in the cmd: "npm i nodemon -g"
     You can run the application by typing in the terminal: "npm run watch"
     That will start the application and then, you can do what you want to do
 
