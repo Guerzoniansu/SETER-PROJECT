@@ -17,11 +17,7 @@ const createWindow = () => {
         },
     })
     win.maximize()
-<<<<<<< HEAD
     win.loadFile('src/html/travel/main.html')
-=======
-    win.loadFile('src/html/actuality/main.html')
->>>>>>> remotes/origin/master
 
     //Close App
     ipc.on('closeApp', () => {
