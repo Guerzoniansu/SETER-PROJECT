@@ -7,8 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="dist/css/style.css">
     <link rel="stylesheet" href="dist/css/index/style.css">
+
+    <style>
+        #map {
+            height: 500px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header class="content__header">
@@ -49,6 +57,93 @@
             <p class="content__section--logo_part__text">TransitHub</p>
         </div>
     </section>
+
+    <section class="content__main">
+        <!--Ma ligne-->
+        <input type="radio" name="tabset" id="tab1" aria-controls="myline" checked>
+        <label for="tab1">Ma ligne</label>
+        <!--Nos services-->
+        <input type="radio" name="tabset" id="tab2" aria-controls="services">
+        <label for="tab2">Nos services</label>
+
+        <!--Main wrapper for the content-->
+        <div class="content__main--cont">
+            <!--Section client line-->
+            <section class="content__main--cont__panel" id="myline">
+                <section class="content__main--cont__panel--option" id="recent">
+                    <div class="content__main--cont__panel--option__title">
+                        <p>Recent</p>
+                    </div>
+                    <div class="content__main--cont__panel--option__main">
+                        <p>Aucune transaction récente enregistrée</p>
+                        <button>Acheter un titre de déplacement</button>
+                    </div>
+                </section>
+                <section class="content__main--cont__panel--option" id="favorites">
+                    <div class="content__main--cont__panel--option__title">
+                        <p>Mes favoris</p>
+                    </div>
+                    <div class="content__main--cont__panel--option__main">
+                        <p>Aucun favoris enregistré</p>
+                        <button>Ajoutez en</button>
+                    </div>
+                </section>
+                <section class="content__main--cont__panel--option" id="subscription">
+                    <div class="content__main--cont__panel--option__title">
+                        <p>Abonnement</p>
+                    </div>
+                    <div class="content__main--cont__panel--option__main">
+                        <p>Aucun abonnement enregistré</p>
+                        <button>Ajoutez en</button>
+                    </div>
+                </section>
+            </section>
+            <!--Section our services-->
+            <section class="content__main--cont__panel" id="services">
+                <section class="content__main--cont__panel--option">
+                    <div class="content__main--cont__panel--option__title">
+                        <p>Plan de la ligne</p>
+                    </div>
+                    <div class="content__main--cont__panel--option__map">
+                        <div class="content__main--cont__panel--option__map--map">
+                            <div id="map">
+    
+                            </div>
+                        </div>
+                        <div class="content__main--cont__panel--option__map--trains">
+                            <p class="content__main--cont__panel--option__map--trains__dispo">
+                                Trains en mouvement
+                            </p>
+                            <div class="content__main--cont__panel--option__map--trains__list">
+    
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="content__main--cont__panel--option">
+                    <p class="content__main--cont__panel--option__title">
+                        Nos offres
+                    </p>
+                    <div class="content__main--cont__panel--option__main">
+                        <div class="content__main--cont__panel--option__main--titre">
+                            <p class="content__main--cont__panel--option__main--titre__title">
+                                Titres de transport
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="content__main--cont__panel--option">
+                    <p class="content__main--cont__panel--option__title">
+                        Actualité du TER de Dakar
+                    </p>
+                    <div class="content__main--cont__panel--option__main">
+        
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+
     <nav class="content__pages">
         <div class="container">
             <div class="content__pages--profile">
@@ -64,13 +159,13 @@
             </div>
             <ul class="content__pages--ulist">
                 <li class="item"><a href="index.html">Accueil</a></li>
-                <li class="item"><a href="appdesign.html">Se déplacer</a></li>
-                <li class="item"><a href="webdesign.html">Titres de transport</a></li>
-                <li class="item"><a href="graphicdesign.html">Mes favoris</a></li>
-                <li class="item"><a href="location.html">Ma ligne</a></li>
-                <li class="item"><a href="presentation.html">Actualités du TER</a></li>
-                <li class="item"><a href="contact.html">Centre d'aide</a></li>
-                <li class="item"><a href="contact.html">Paramètre</a></li>
+                <li class="item"><a href="">Se déplacer</a></li>
+                <li class="item"><a href="">Titres de transport</a></li>
+                <li class="item"><a href="">Mes favoris</a></li>
+                <li class="item"><a href="">Ma ligne</a></li>
+                <li class="item"><a href="">Actualités du TER</a></li>
+                <li class="item"><a href="">Centre d'aide</a></li>
+                <li class="item"><a href="">Paramètres</a></li>
             </ul>
             <div class="content__pages--about">
                 <a href="#">TransitHub</a>
@@ -85,5 +180,49 @@
 
     <script src="src/js/app.func.js"></script>
     <script src="src/js/travel/main.js"></script>
+    <!--<script src="src/js/travel/renderer.js"></script>-->
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
 </body>
+<script>
+    // Initialize and add the map
+let map;
+
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: 14.6919, lng: -17.4474 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 12,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerView({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
+}
+
+initMap();
+
+function success(pos) {
+    console.log(pos);
+}
+
+function error() {
+    console.log('Not goog')
+}
+
+const options = {}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+</script>
 </html>
