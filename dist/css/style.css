@@ -322,6 +322,7 @@ body {
 
 .info_actu .entete p {
   font-size: 120%;
+  color: var(--red);
   font-weight: bold;
   margin-left: 10px;
 }
@@ -331,6 +332,7 @@ body {
 }
 
 .containers {
+  margin: 10px;
   display: block;
   position: relative;
 }
