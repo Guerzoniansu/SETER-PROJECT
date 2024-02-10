@@ -2,5 +2,5 @@
     "ignore": [
         "img/"
     ],
-    "ext": "json, ts, html, scss, css, js, jsx, tsx, cjs"
+    "ext": "json, ts, html, scss, css, js"
 }
