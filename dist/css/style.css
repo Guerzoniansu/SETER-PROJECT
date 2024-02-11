@@ -391,3 +391,70 @@ body {
 .content__main--cont__panel--option__map--map {
   width: 100%;
 }
+
+.hcontent__main {
+  position: relative;
+  padding: 0.625rem 3.125rem;
+  width: 100%;
+}
+.hcontent__main input[type=radio] {
+  position: absolute;
+  left: -200vw;
+}
+.hcontent__main label {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+  padding: 0.25rem 1.25rem;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--bg);
+  text-align: center;
+  transition: 0.1s ease;
+}
+.hcontent__main label:nth-child(2) {
+  margin-right: 0.625rem;
+}
+.hcontent__main label:hover {
+  color: var(--lighter--peach);
+}
+.hcontent__main input:nth-child(1):checked ~ .hcontent__main--cont > .hcontent__main--cont__panel:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  text-align: left;
+}
+.hcontent__main input:nth-child(3):checked ~ .hcontent__main--cont > .hcontent__main--cont__panel:nth-child(2) {
+  display: block;
+}
+.hcontent__main input:nth-child(1):checked ~ label:nth-child(2),
+.hcontent__main input:nth-child(3):checked ~ label:nth-child(4) {
+  color: var(--peach);
+  border-color: var(--peach);
+}
+.hcontent__main--cont__panel {
+  display: none;
+  text-align: left;
+}
+.hcontent__main--cont__panel hr {
+  height: 0;
+  width: 100%;
+  margin: 1.25rem 0;
+}
+.hcontent__main--cont__panel--email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hcontent__main--cont__panel--email__p {
+  margin-left: 1.25rem;
+}
+.hcontent__main--cont__panel--numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hcontent__main--cont__panel--numero__p {
+  margin-left: 1.25rem;
+}
