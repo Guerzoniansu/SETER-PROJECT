@@ -4,8 +4,317 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titres et transport</title>
+
+    <link rel="stylesheet" href="../../../dist/css/transport/components/main.css">
+    <link rel="stylesheet" href="../../../dist/css/style.css">
 </head>
 <body>
+    <header class="content__header">
+        <p class="content__header--logotext">TransitHub</p>
+        <div class="content__header--tab">
+            <div class="content__header--tab__icon" id="minimize">
+                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="feather feather-minimize"><path d="M14 8v1H3V8h11z"/></svg>
+            </div>
+            <div class="content__header--tab__icon" id="reduce">
+                <svg class="restore" fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><g fill="#212121"><path d="m5.08496 4c.20592-.5826.76154-1 1.41465-1h3.5c1.65689 0 2.99999 1.34315 2.99999 3v3.5c0 .6531-.4174 1.2087-1 1.4146v-4.9146c0-1.10457-.8954-2-1.99999-2z"/><path d="m4.5 5h5c.8284 0 1.5.67157 1.5 1.5v5c0 .8284-.6716 1.5-1.5 1.5h-5c-.82843 0-1.5-.6716-1.5-1.5v-5c0-.82843.67157-1.5 1.5-1.5zm0 1c-.27614 0-.5.22386-.5.5v5c0 .2761.22386.5.5.5h5c.27614 0 .5-.2239.5-.5v-5c0-.27614-.22386-.5-.5-.5z"/></g></svg>
+                <svg class="maximize" fill="none" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m4.5 3c-.82843 0-1.5.67157-1.5 1.5v7c0 .8284.67157 1.5 1.5 1.5h7c.8284 0 1.5-.6716 1.5-1.5v-7c0-.82843-.6716-1.5-1.5-1.5zm0 1h7c.2761 0 .5.22386.5.5v7c0 .2761-.2239.5-.5.5h-7c-.27614 0-.5-.2239-.5-.5v-7c0-.27614.22386-.5.5-.5z" fill="#212121"/></svg>
+            </div>
+            <div class="content__header--tab__icon" id="close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+        </div>
+    </header>
+    <section class="content__section">
+        <div class="content__section--burger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </div>
+        <div class="content__section--util">
+            <div class="content__section--util__search">
+                <div class="content__section--util__search--search_bar" tabindex="0">
+                    <input type="text" name="search" id="searchbar" placeholder="Search...">
+                    <div class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </div>
+                </div>
+                <button type="button">Search</button>
+            </div>
+        </div>
+
+        <div class="content__section--logo_part">
+            <div class="content__section--logo_part__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="30" height="30" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><path d="M28.6,11.3V4.8c0-0.8-0.6-1.4-1.4-1.4h-6.5c-1.2,0-2.4,0.4-3.4,1c-0.5,0.3-0.9,0.7-1.3,1.2c-1.1-1.3-2.8-2.2-4.7-2.2H4.8  C4,3.4,3.4,4,3.4,4.8v6.5c0,1.9,0.9,3.5,2.2,4.7c-1.3,1.1-2.2,2.8-2.2,4.7v6.5c0,0.8,0.6,1.4,1.4,1.4h6.5c0.8,0,1.4-0.6,1.4-1.4  c0-0.8-0.6-1.4-1.4-1.4H6.2v-5.1c0-1.8,1.4-3.2,3.2-3.2h5.1v5.1c0,3.4,2.7,6.1,6.1,6.1h6.5c0.8,0,1.4-0.6,1.4-1.4v-6.5  c0-1.9-0.9-3.5-2.2-4.7C27.8,14.9,28.6,13.2,28.6,11.3z M9.5,14.6c-1.8,0-3.2-1.4-3.2-3.2V6.2h5.1c1.8,0,3.2,1.4,3.2,3.2v5.1H9.5z   M25.8,20.7v5.1h-5.1c-1.8,0-3.2-1.4-3.2-3.2v-5.1h5.1C24.3,17.4,25.8,18.9,25.8,20.7z M17.4,14.6V9.5c0-1.1,0.5-2.1,1.4-2.7  c0.5-0.4,1.2-0.6,1.8-0.6h5.1v5.1c0,1.8-1.4,3.2-3.2,3.2H17.4z" fill = "currentColor"/></svg>
+            </div>
+            <p class="content__section--logo_part__text">TransitHub</p>
+        </div>
+    </section >
+        
+    <section class = "achat_ticket">
+        
+        <div class="type_ticket">
+            <label for="choix_ticket" class="ticket_label">Choix du service:</label>
+            <select id="choix_ticket" name="choix_ticket" class="ticket_select">
+                <option value="1">Ticket aller simple</option>
+                <option value="2">Forfait de 10 tickets </option>
+                <option value="3">Offre d'abonnement</option>
+                <option value="4">Abonnement pour jeunes </option>
+                <option value="5">Abonnement pour enfants</option>
+            </select>
+        </div>
+
+        <!--aller simple-->
+        <div class="ticket_forfait" id="ticket_aller_simple">
+           <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                <p class="ticket_forfait_zone"> Dans 1 zone.  Validité : 5 jours </p>
+                <p class="ticket_forfait_prix"> 500 FCFA </p>
+
+           </div>
+           <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                <p class="ticket_forfait_zone"> Dans 2 zone.  Validité : 5 jours </p>
+                <p class="ticket_forfait_prix"> 1000 FCFA </p>
+
+           </div>
+           <div class = "ticket_forfait_options">
+            <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+            <p class="ticket_forfait_zone"> Dans 3 zone.  Validité : 5 jours </p>
+            <p class="ticket_forfait_prix"> 1500 FCFA </p>
+
+           </div>
+           <div class = "ticket_forfait_options">
+            <p class="ticket_forfait_class"> Voyage première classe.</p>
+            <p class="ticket_forfait_zone"> Toutes les zones.  Validité : 5 jours </p>
+            <p class="ticket_forfait_prix"> 2500 FCFA </p>
+
+           </div>
+         
+          
+        </div>
+
+        <!--forfait de 10 tckets-->
+        <div class="ticket_forfait" style="display: none;" id="forfait_10_tickets">
+            <div class = "ticket_forfait_options">
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 1 zone.  Validité : Illimité </p>
+                 <p class="ticket_forfait_prix"> 4500 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 2 zone.  Validité : Illimité </p>
+                 <p class="ticket_forfait_prix"> 9000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+             <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+             <p class="ticket_forfait_zone"> Dans 3 zone.  Validité : Illimité </p>
+             <p class="ticket_forfait_prix"> 13500 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+             <p class="ticket_forfait_class"> Voyage première classe.</p>
+             <p class="ticket_forfait_zone"> Toutes les zones.  Validité : Illimité </p>
+             <p class="ticket_forfait_prix"> 22500 FCFA </p>
+ 
+            </div>
+          
+           
+         </div>
+         <!--abonnement -->
+         <div class="ticket_forfait" style="display: none;" id="ticket_abonnement">
+            <div class = "ticket_forfait_options">
+                 <p class="ticket_forfait_class"> Abonnement Semaine.</p>
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 1 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+                 <p class="ticket_forfait_prix"> 6000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                 <p class="ticket_forfait_class"> Abonnement Semaine.</p>
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 2 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+                 <p class="ticket_forfait_prix"> 12000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+             <p class="ticket_forfait_class"> Abonnement Semaine.</p>
+             <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+             <p class="ticket_forfait_zone"> Dans 3 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+             <p class="ticket_forfait_prix"> 18000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+             <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+             <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+             <p class="ticket_forfait_zone"> Dans 1 zone.  Validité : 1er au 30 ou 31 du mois </p>
+             <p class="ticket_forfait_prix"> 15000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+                <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                <p class="ticket_forfait_zone"> Dans 2 zone.  Validité : 1er au 30 ou 31 du mois </p>
+                <p class="ticket_forfait_prix"> 30000 FCFA </p>
     
+               </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+                <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                <p class="ticket_forfait_zone"> Dans 3 zone.  Validité : 1er au 30 ou 31 du mois </p>
+                <p class="ticket_forfait_prix"> 45000 FCFA </p>
+    
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement semaine.</p>
+                <p class="ticket_forfait_class"> Voyage première classe.</p>
+                <p class="ticket_forfait_zone"> Toutes les zones.  Validité : Lundi 00h Vendredi 23h59 </p>
+                <p class="ticket_forfait_prix"> 30000 FCFA </p>
+    
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+                <p class="ticket_forfait_class"> Voyage première classe.</p>
+                <p class="ticket_forfait_zone"> Toutes les zones.  Validité : 1er au 30 ou 31 du mois </p>
+                <p class="ticket_forfait_prix"> 75000 FCFA </p>
+    
+            </div>
+          
+        <!--abonnement jeunes-->
+         </div>
+         <div class="ticket_forfait" style="display: none;" id="ticket_abonnement_jeune">
+            <div class = "ticket_forfait_options">
+                 <p class="ticket_forfait_class"> Abonnement semaine.</p>
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 1 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+                 <p class="ticket_forfait_prix"> 5500 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                 <p class="ticket_forfait_class"> Abonnement semaine.</p>
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 2 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+                 <p class="ticket_forfait_prix"> 11000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement semaine.</p>
+             <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+             <p class="ticket_forfait_zone"> Dans 3 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+             <p class="ticket_forfait_prix"> 16500 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+             <p class="ticket_forfait_class"> Voyage première classe.</p>
+             <p class="ticket_forfait_zone"> Dans 1 zone.  1er au 30 ou 31 du mois </p>
+             <p class="ticket_forfait_prix"> 13500 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+                <p class="ticket_forfait_class"> Voyage première classe.</p>
+                <p class="ticket_forfait_zone"> Dans 2 zone.  1er au 30 ou 31 du mois </p>
+                <p class="ticket_forfait_prix"> 27000 FCFA </p>
+    
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+                <p class="ticket_forfait_class"> Voyage première classe.</p>
+                <p class="ticket_forfait_zone"> Dans 3 zone.  1er au 30 ou 31 du mois </p>
+                <p class="ticket_forfait_prix"> 40500 FCFA </p>
+    
+            </div>
+          
+           
+         </div>
+         <!--abonnement enfants-->
+         <div class="ticket_forfait" style="display: none;" id="ticket_abonnement_enfant">
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement semaine.</p>
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 1 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+                 <p class="ticket_forfait_prix"> 3000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement semaine.</p>
+                 <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+                 <p class="ticket_forfait_zone"> Dans 2 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+                 <p class="ticket_forfait_prix"> 6000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement semaine.</p>
+             <p class="ticket_forfait_class"> Voyage seconde classe.</p>
+             <p class="ticket_forfait_zone"> Dans 3 zone.  Validité : Lundi 00h Vendredi 23h59 </p>
+             <p class="ticket_forfait_prix"> 9000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+             <p class="ticket_forfait_class"> Voyage première classe.</p>
+             <p class="ticket_forfait_zone"> Dans 1 zone.  Validité : 1er au 30 ou 31 du mois </p>
+             <p class="ticket_forfait_prix"> 7500 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+             <p class="ticket_forfait_class"> Voyage première classe.</p>
+             <p class="ticket_forfait_zone"> Dans 2 zone.  Validité : 1er au 30 ou 31 du mois </p>
+             <p class="ticket_forfait_prix"> 15000 FCFA </p>
+ 
+            </div>
+            <div class = "ticket_forfait_options">
+                <p class="ticket_forfait_class"> Abonnement mensuel.</p>
+             <p class="ticket_forfait_class"> Voyage première classe.</p>
+             <p class="ticket_forfait_zone"> Dans 3 zone.  Validité : 1er au 30 ou 31 du mois </p>
+             <p class="ticket_forfait_prix"> 22500 FCFA </p>
+ 
+            </div>
+          
+           
+         </div>
+
+        <div class="boutton_ticket">
+            <button id = "boutton_ticket_b" class="boutton_ticket_b" type="button" disabled>Acheter</button>
+        </div>
+
+
+    </section>
+
+    <nav class="content__pages">
+        <div class="container">
+            <div class="content__pages--profile">
+                <div class="content__pages--profile__main">
+                    <img src="../../../img/travel/user.svg" alt="user photo">
+                </div>
+                <div class="content__pages--profile__hello">
+                    <p>Hello username</p>
+                    <div>
+                        <svg fill="none" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m4 9 8 8 8-8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/></svg>
+                    </div>
+                </div>
+            </div>
+            <ul class="content__pages--ulist">
+                <li class="item"><a href="index.html">Accueil</a></li>
+                <li class="item"><a href="src/html/travel/main.html">Se déplacer</a></li>
+                <li class="item"><a href="src/html/transport/main.html">Titres de transport</a></li>
+                <li class="item"><a href="src/html/actuality/main.html">Actualités du TER</a></li>
+                <li class="item"><a href="src/html/help/main.html">Centre d'aide</a></li>
+                <li class="item"><a href="src/html/settings/main.html">Paramètres</a></li>
+            </ul>
+            <div class="content__pages--about">
+                <a href="#">TransitHub</a>
+                <div>
+                    <p class="version">Version 1.0.0</p>
+                    <p>-</p>
+                    <a href="#" class="about">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="../../js/transport/main.js"></script>
+    <script src="../../js/app.func.js"></script>
 </body>
 </html>

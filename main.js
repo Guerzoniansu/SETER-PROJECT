@@ -17,7 +17,7 @@ const createWindow = () => {
         },
     })
     win.maximize()
-    win.loadFile('src/html/travel/main.html')
+    win.loadFile('src/html/transport/main.html')
 
     //Close App
     ipc.on('closeApp', () => {
