@@ -196,6 +196,9 @@
   align-items: center;
   justify-content: start;
 }
+.content__pages ul li.selected {
+  background: var(--bg);
+}
 .content__pages ul li a {
   width: 100%;
   text-decoration: none;

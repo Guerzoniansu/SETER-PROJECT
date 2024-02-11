@@ -230,6 +230,10 @@
             align-items: center;
             justify-content: start;
 
+            &.selected {
+                background: var(--bg);
+            }
+
             a {
                 width: 100%;
                 text-decoration: none;
